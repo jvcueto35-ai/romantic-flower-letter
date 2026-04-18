@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 🌹</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="petal-bg" id="petalBg"></div>
+
+<div class="scene">
+
+  <!-- FLOWER -->
+  <div class="flower-wrap">
+    <svg width="220" height="300" viewBox="0 0 220 300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="petalG1" cx="50%" cy="60%" r="60%">
+          <stop offset="0%" stop-color="#ff6e8a"/>
+          <stop offset="100%" stop-color="#9c1a35"/>
+        </radialGradient>
+        <radialGradient id="petalG2" cx="50%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#e84e70"/>
+          <stop offset="100%" stop-color="#7a0e28"/>
+        </radialGradient>
+        <radialGradient id="centerG" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#ffb8c8"/>
+          <stop offset="100%" stop-color="#cc2244"/>
+        </radialGradient>
+        <radialGradient id="leafG" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#2e7c45"/>
+          <stop offset="100%" stop-color="#1a4a28"/>
+        </radialGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="3" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- stem -->
+      <path d="M110 280 C108 240, 104 200, 106 170" stroke="#2a5c30" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- left leaf -->
+      <path d="M108 220 C90 200, 65 195, 70 210 C72 222, 100 228, 108 220Z" fill="url(#leafG)"/>
+      <!-- right leaf -->
+      <path d="M107 190 C125 168, 148 162, 146 178 C144 192, 114 200, 107 190Z" fill="url(#leafG)" opacity="0.9"/>
+
+      <!-- back petals (layer 1) -->
+      <g filter="url(#glow)" opacity="0.85">
+        <ellipse cx="110" cy="125" rx="17" ry="50" fill="url(#petalG2)" transform="rotate(-72, 110, 165)"/>
+        <ellipse cx="110" cy="125" rx="17" ry="50" fill="url(#petalG2)" transform="rotate(-36, 110, 165)" opacity="0.9"/>
+        <ellipse cx="110" cy="125" rx="17" ry="50" fill="url(#petalG2)" transform="rotate(0,  110, 165)"/>
+        <ellipse cx="110" cy="125" rx="17" ry="50" fill="url(#petalG2)" transform="rotate(36, 110, 165)" opacity="0.9"/>
+        <ellipse cx="110" cy="125" rx="17" ry="50" fill="url(#petalG2)" transform="rotate(72, 110, 165)"/>
+      </g>
+
+      <!-- front petals (layer 2) -->
+      <g filter="url(#glow)">
+        <ellipse cx="110" cy="130" rx="15" ry="45" fill="url(#petalG1)" transform="rotate(-54, 110, 165)"/>
+        <ellipse cx="110" cy="130" rx="15" ry="45" fill="url(#petalG1)" transform="rotate(-18, 110, 165)"/>
+        <ellipse cx="110" cy="130" rx="15" ry="45" fill="url(#petalG1)" transform="rotate(18,  110, 165)"/>
+        <ellipse cx="110" cy="130" rx="15" ry="45" fill="url(#petalG1)" transform="rotate(54,  110, 165)"/>
+        <ellipse cx="110" cy="130" rx="15" ry="45" fill="url(#petalG1)" transform="rotate(90,  110, 165)"/>
+      </g>
+
+      <!-- centre -->
+      <circle cx="110" cy="164" r="22" fill="url(#centerG)" filter="url(#glow)"/>
+      <circle cx="110" cy="164" r="14" fill="#d43055" opacity="0.7"/>
+      <circle cx="110" cy="164" r="6"  fill="#ffd0dd" opacity="0.9"/>
+
+      <!-- small sparkle dots -->
+      <circle cx="82" cy="145" r="2" fill="#ffb8d0" opacity="0.8"/>
+      <circle cx="140" cy="148" r="1.5" fill="#ffb8d0" opacity="0.7"/>
+      <circle cx="96"  cy="120" r="1.5" fill="#ff9ab8" opacity="0.6"/>
+      <circle cx="125" cy="122" r="2"   fill="#ffb8d0" opacity="0.8"/>
+    </svg>
+  </div>
+
+  <!-- LETTER -->
+  <div class="letter-container">
+    <div class="envelope" id="envelope">
+      <div class="title-line">A letter para sau</div>
+      <div class="seal">♡</div>
+      <div class="letter-rule"></div>
+
+      <div class="salutation">My Bebu,</div>
+<div class="letter-text" id="letterText">
+        <p class="letter-body">
+          to my Bebu, Chair up<br>
+          kung si mother earth ay makulimlim<em></em>.<br><br>
+          wag mmo hayaan kili-kili mo mangitim,<br>
+          sabi ni kuya kim "ang buhay ay weather-weather lang".<br>
+          ang sabi ko naman ay "Edi wow" <br>
+          <em>ang init sa pilipinas, lalo na yang ulo mo.</em><br><br>
+          sa mundong ito madaming pangyayare,<br>
+         kaya maligaya ang buhay mo chismosa ka kase:<br>
+          <em>pagbutihin mo pa, at palaging tandaan, aray mo pakak.</em>
+        </p>
+        <div class="letter-rule" style="margin-top:20px;"></div>
+        <div class="sign-off">Forever yours, &nbsp;✦</div>
+         <div class="sign-off">Boyong, &nbsp;</div>
+      </div>
+      <button class="btn-open" id="openBtn" onclick="openLetter(event)">
+        Open the letter ↓
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  /* --- Floating petals --- */
+  const bg = document.getElementById('petalBg');
+  const colors = ['#c93050','#e05070','#a82040','#f07090','#d04060','#b83055'];
+  for (let i = 0; i < 28; i++) {
+    const p = document.createElement('div');
+    p.className = 'fp';
+    p.style.cssText = `
+      left: ${Math.random()*100}%;
+      top: ${Math.random()*-20}%;
+      background: ${colors[Math.floor(Math.random()*colors.length)]};
+      width: ${6+Math.random()*10}px;
+      height: ${10+Math.random()*14}px;
+      animation-duration: ${6+Math.random()*10}s;
+      animation-delay: ${Math.random()*8}s;
+      transform: rotate(${Math.random()*360}deg);
+      opacity:0;
+    `;
+    bg.appendChild(p);
+  }
+
+  /* --- Open letter --- */
+  let opened = false;
+  function openLetter(e) {
+    if (opened) return;
+    opened = true;
+
+    const btn = document.getElementById('openBtn');
+    const text = document.getElementById('letterText');
+
+    /* sparkle burst */
+    const rect = btn.getBoundingClientRect();
+    const cx = e.clientX || rect.left + rect.width/2;
+    const cy = e.clientY || rect.top  + rect.height/2;
+    for (let s = 0; s < 8; s++) {
+      const sp = document.createElement('div');
+      sp.className = 'sparkle';
+      const size = 8 + Math.random()*12;
+      sp.style.cssText = `
+        left:${cx + (Math.random()-0.5)*60}px;
+        top:${cy  + (Math.random()-0.5)*40}px;
+        width:${size}px; height:${size}px;
+        background: hsl(${340+Math.random()*30}, 80%, 65%);
+        animation-delay: ${Math.random()*0.2}s;
+      `;
+      document.body.appendChild(sp);
+      setTimeout(() => sp.remove(), 900);
+    }
+
+    text.classList.add('open');
+    btn.style.opacity = '0';
+    btn.style.pointerEvents = 'none';
+    btn.style.transition = 'opacity 0.5s';
+  }
+</script>
+</body>
+</html>
